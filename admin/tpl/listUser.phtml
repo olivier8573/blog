@@ -1,0 +1,37 @@
+<!-- Ce fichier correspond à la vue repris dans la variable $vue -->
+
+<h1>Auteurs</h1>
+
+<table border=1>
+
+<tr>
+
+    <td>Numéro d'auteur</td>
+    <td>Nom</td>
+    <td>Prénom</td>
+    <td>Email</td>
+    <td>Action</td>
+
+</tr>
+
+<!-- La fonction foreach déroule le tableau $resultats en nommant chaque ligne '$resultat' / Dans le tableau $results sont contenus les résultats de la requête (customerNumber, customerName...) que l'on affiche dans un tableau -->
+
+<!-- foreach {} est remplacé par foreach: endforeach; -->
+
+<!-- Devant chaque $resultat : version abrégée de PHP qui remplace le echo habituel -->
+
+<?php foreach ($resultats as $resultat): ?>
+
+<tr>
+
+    <td><?= $resultat['aut_id']; ?></td>
+    <td><?= $resultat['aut_name']; ?></td>
+    <td><?= $resultat['aut_firstname']; ?></td>
+    <td><?= $resultat['aut_email']; ?></td>
+    <td><a href="deleteUser.php?id=<?= $resultat['aut_id']; ?>">Supprimer</a></td>				
+
+</tr>
+
+<?php endforeach; ?>
+
+</table>

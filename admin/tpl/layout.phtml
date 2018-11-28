@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<!-- Ce fichier correspond à l'affichage systématique prévu dans les pages php qui fait ensuite appel à une variable $vue qui contient la véritable page -->
+
+<html lang="fr">
+
+
+<head>
+
+    <meta charset="utf-8" />
+    <title>Layout</title>
+
+</head>
+
+
+<body>
+   
+    <!-- Lien vers la vue en se positionnant depuis l'arborescence du fichier php -->
+    <?php include('tpl/'.$vue); ?>
+
+</body>
+
+
+</html>
